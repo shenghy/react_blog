@@ -1,0 +1,22 @@
+.rightmi-div{
+    margin-top: 8px !important;
+}
+.miquan-img img{
+    width: 100%;
+    border-radius: 3px;
+}
+.miquan-price{
+    text-align: center;
+    margin: 5px;
+    color: #1890ff;
+    font-size: 1.0rem;
+}
+.miquan-text{
+    padding: 5px;
+    line-height: 14px;
+    color:#999;
+    
+}
+.miquan-text span{
+    color:#999;
+}
