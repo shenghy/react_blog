@@ -63,48 +63,46 @@ const Home = (res) =>{
       
         <Row className="comm-main" type="flex" justify="center">
           <Col  xs={24} sm={24} md={18}  >
-              <div className="comm-left">
-                <List
-                      header={
-                        <div className="bibidao-title">
-                           <div className="list-header left">大胖逼逼叨</div>
-                           <div className="list-header right">
-                             <Link href={{pathname:'/bibidao'}} >
-                                <a>更多 </a>
-                              </Link>
-                           </div>
+              
+                <Row>
+                  <Col  xs={0} sm={0} md={24}>
+                  <div className="comm-left">
+                        <List
+                            header={
+                              <div className="bibidao-title">
+                                <div className="list-header left">大胖逼逼叨</div>
+                                <div className="list-header right">
+                                  <Link href={{pathname:'/bibidao'}} >
+                                      <a>更多 </a>
+                                    </Link>
+                                </div>
+                              </div>
+                            }
+                            dataSource={bibidaoList}
+                            grid={{
+                                gutter: 10,
+                                sm: 0,
+                                md: 4,
+                            }}
+                            renderItem={item => (
+                                <List.Item>
+                                      <a href={item.url} target="_blank">
+                                        <img src={item.image} className="bbd-img" />
+                                      </a>
+                                      <div className="bbd-title">
+                                      
+                                        <a href={item.url} target="_blank">
+                                          <span className="bbd-zi">{item.title} </span> 
+                                        </a>
+                                      </div>
+                                </List.Item>
+                            )}
+                        />
                         </div>
-                      }
-                      dataSource={bibidaoList}
-                      grid={{
-                          gutter: 10,
-                          xs: 2,
-                          sm: 4,
-                          md: 4,
-                          lg: 4,
-                          xl:4,
-                          xxl: 4,
-                      }}
-                      renderItem={item => (
-                          <List.Item>
-                              <Card  bordered={false}  >
-                              <div>
-                                  <a href={item.url} target="_blank">
-                                    <img alt="example" src={item.image} className="bbd-img"/>
-                                  </a>
-                              </div>
-                              <div className="bbd-title">
-                                <a href={item.url} target="_blank">
-                                  <span className="bbd-zi">{item.title} </span> 
-                                </a>
-                              </div>
-                            
-                              
-                              </Card>
-                          </List.Item>
-                      )}
-                  />
-              </div>
+                  </Col>
+                </Row>
+               
+              
 
               <div className="comm-left">
                 

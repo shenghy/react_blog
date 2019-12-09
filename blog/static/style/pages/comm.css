@@ -67,9 +67,7 @@ body{
 }
 .bbd-zi{
   color: #888;
-  
 }
 .ant-card-body{
-  padding-bottom:14px !important;
-  padding-top:14px !important;
+  padding:10px;
 }

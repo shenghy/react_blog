@@ -42,8 +42,8 @@ const Bibidao = (data) =>{
                     grid={{
                         gutter: 15,
                         xs: 1,
-                        sm: 2,
-                        md: 2,
+                        sm: 4,
+                        md: 4,
                         lg:4
                        
                     }}
