@@ -73,6 +73,12 @@ code {
 iframe{
     height: 34rem;
 }
+@media screen and (min-width: 320px)and (max-width: 750px){
+    iframe{
+        height: 12rem;
+    }
+}
+
 .detailed-content  img{
     width: 100%;
     border:1px solid #f3f3f3;
