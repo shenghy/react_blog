@@ -7,6 +7,7 @@ let servicePath = {
     getTypeInfo:ipUrl + 'getTypeInfo',         // 文章分类信息
     getListById:ipUrl + 'getListById/',         // 根据类别ID获得文章列表
     getAllPartCount:ipUrl + 'getAllPartCount',         // 获得所有集数和访问数
+    getListBBD:ipUrl + 'getListBBD',         // 大胖逼逼叨的列表
     
 }
 

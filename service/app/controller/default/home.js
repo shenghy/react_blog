@@ -25,9 +25,15 @@ class HomeController extends Controller{
         //console.log(sql)
         const resList = await this.app.mysql.query(sql)
         const resType = await this.app.mysql.select('type')
+        //大胖逼逼叨列表
+        const bibidaoList = await this.app.mysql.select('bibidao',{
+            orders:[['id','desc']],
+            limit:4
+        })
         this.ctx.body={
             list:resList,
-            type:resType
+            type:resType,
+            bibidaoList:bibidaoList
         }
 
     }
@@ -114,9 +120,15 @@ class HomeController extends Controller{
         
         const result = await this.app.mysql.query(sql)
         this.ctx.body={data:result}
-        
-
     }
+     //读取大胖逼逼叨的列表
+     async getListBBD(){
+        const resList = await this.app.mysql.select('bibidao',{
+            orders:[['id','desc']]
+        })
+        
+        this.ctx.body={list:resList}
+     }
 
     
 

@@ -1,7 +1,7 @@
 import React,{useState } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
-import {Row, Col , List ,Icon ,BackTop ,Spin ,Affix } from 'antd'
+import {Row, Col , List ,Icon ,BackTop ,Spin ,Affix ,Card,PageHeader} from 'antd'
 import axios from 'axios'
 import Header from '../components/Header'
 import Author from '../components/Author'
@@ -19,6 +19,7 @@ import CountUp from 'react-countup'
 const Home = (res) =>{
   const [ mylist , setMylist ] = useState( res.list);
   const [ type , setType ] = useState( res.type);
+  const [ bibidaoList , setBibidaoList ] = useState( res.bibidaoList);
   const [ loading,setLoading] =useState(false)
 
 
@@ -61,8 +62,52 @@ const Home = (res) =>{
       
       
         <Row className="comm-main" type="flex" justify="center">
-          <Col className="comm-left" xs={24} sm={24} md={18}  >
-              <div>
+          <Col  xs={24} sm={24} md={18}  >
+              <div className="comm-left">
+                <List
+                      header={
+                        <div className="bibidao-title">
+                           <div className="list-header left">大胖逼逼叨</div>
+                           <div className="list-header right">
+                             <Link href={{pathname:'/bibidao'}} >
+                                <a>更多 </a>
+                              </Link>
+                           </div>
+                        </div>
+                      }
+                      dataSource={bibidaoList}
+                      grid={{
+                          gutter: 10,
+                          xs: 2,
+                          sm: 4,
+                          md: 4,
+                          lg: 4,
+                          xl:4,
+                          xxl: 4,
+                      }}
+                      renderItem={item => (
+                          <List.Item>
+                              <Card  bordered={false}  >
+                              <div>
+                                  <a href={item.url} target="_blank">
+                                    <img alt="example" src={item.image} className="bbd-img"/>
+                                  </a>
+                              </div>
+                              <div className="bbd-title">
+                                <a href={item.url} target="_blank">
+                                  <span className="bbd-zi">{item.title} </span> 
+                                </a>
+                              </div>
+                            
+                              
+                              </Card>
+                          </List.Item>
+                      )}
+                  />
+              </div>
+
+              <div className="comm-left">
+                
               
                 <List
                   header={<div className="list-header">最新日志</div>}

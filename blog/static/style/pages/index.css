@@ -44,3 +44,15 @@ code {
   
  
 }
+.bibidao-title{
+    display: flex;
+    flex-direction: row;
+}
+.bibidao-title > div{
+    width: 50%;
+}
+.right{
+    text-align: right;
+    padding-right:10px ;
+    font-size: 0.9rem;
+}

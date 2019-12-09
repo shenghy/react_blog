@@ -88,7 +88,7 @@ class MainController extends Controller{
                   'type.typeName as typeName '+
                   'FROM article LEFT JOIN type ON article.type_id = type.Id '+
                   'ORDER BY article.id DESC '
-                  console.log(sql)
+                  
          const resList = await this.app.mysql.query(sql)
          this.ctx.body={list:resList}
  
@@ -97,7 +97,6 @@ class MainController extends Controller{
      //删除文章
      async delArticle(){
          let id = this.ctx.params.id
-         console.log(id)
          const res = await this.app.mysql.delete('article',{'id':id})
          this.ctx.body={data:res}
      }
@@ -120,6 +119,31 @@ class MainController extends Controller{
          const result = await this.app.mysql.query(sql)
          this.ctx.body={data:result}
      }
+
+
+     //增加大胖逼逼叨的方法
+     async addBBD(){
+        let tmpBBD = this.ctx.request.body
+        const result = await this.app.mysql.insert('bibidao',tmpBBD)
+        const insertSuccess = result.affectedRows === 1
+        this.ctx.body={ isScuccess:insertSuccess }
+     }
+     //读取大胖逼逼叨的列表
+     async getListBBD(){
+        const resList = await this.app.mysql.select('bibidao',{
+            orders:[['id','desc']]
+        })
+        console.log(resList)
+        this.ctx.body={list:resList}
+     }
+
+     //根据ID删除逼逼叨列表的方法
+     async delBBDbyId(){
+        let id = this.ctx.params.id
+        const res = await this.app.mysql.delete('bibidao',{'id':id})
+        this.ctx.body={data:res}
+     } 
+
 
 
    

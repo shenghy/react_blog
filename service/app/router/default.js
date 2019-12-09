@@ -6,4 +6,5 @@ module.exports = app =>{
     router.get('/default/getTypeInfo',controller.default.home.getTypeInfo)
     router.get('/default/getListById/:id',controller.default.home.getListById)
     router.get('/default/getAllPartCount',controller.default.home.getAllPartCount)
+    router.get('/default/getListBBD',controller.default.home.getListBBD)
 }

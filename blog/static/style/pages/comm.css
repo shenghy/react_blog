@@ -10,6 +10,7 @@ body{
   padding:.3rem;
   border-radius: .3rem;
   border:1px solid #eee;
+  margin-bottom: 16px;
 }
 .comm-box{
   background-color: #FFF;
@@ -46,11 +47,29 @@ body{
   padding: 0 10px;
 }
 .list-header{
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   padding-left:1rem;
 }
 .list-go{
   text-align: right;
   margin-right: 20px;
   color:#bbb;
+}
+.bbd-img{
+  border-radius: 4px;
+  width: 100%;
+}
+.bbd-title{
+  margin-top:10px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.bbd-zi{
+  color: #888;
+  
+}
+.ant-card-body{
+  padding-bottom:14px !important;
+  padding-top:14px !important;
 }

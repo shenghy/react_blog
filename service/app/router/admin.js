@@ -11,4 +11,7 @@ module.exports = app =>{
     router.post('/admin/checkLogin',controller.admin.main.checkLogin)
     router.post('/admin/checkOpenId',controller.admin.main.checkOpenId)
     router.get('/admin/outLogin',adminauth,controller.admin.main.outLogin)
+    router.post('/admin/addBBD',adminauth,controller.admin.main.addBBD)
+    router.get('/admin/getListBBD',adminauth,controller.admin.main.getListBBD)
+    router.get('/admin/delBBDbyId/:id',adminauth,controller.admin.main.delBBDbyId)
 }
