@@ -14,4 +14,5 @@ module.exports = app =>{
     router.post('/admin/addBBD',adminauth,controller.admin.main.addBBD)
     router.get('/admin/getListBBD',adminauth,controller.admin.main.getListBBD)
     router.get('/admin/delBBDbyId/:id',adminauth,controller.admin.main.delBBDbyId)
+    router.post('/admin/updateIsTop',adminauth,controller.admin.main.updateIsTop)
 }

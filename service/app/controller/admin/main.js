@@ -74,7 +74,23 @@ class MainController extends Controller{
         this.ctx.body={
             isScuccess:updateSuccess
         }
-    }    
+    }  
+    
+    //修改文章置顶信息
+    async updateIsTop(){
+        let tmpArticle= this.ctx.request.body
+       
+
+        let sql = 'update  article set isTop = '+tmpArticle.isTop+' where id = '+tmpArticle.id
+        let updateResult=await this.app.mysql.query(sql)
+        const updateSuccess = updateResult.affectedRows === 1
+        if(updateSuccess){
+            this.ctx.body={data:'success'}
+        }else{
+            this.ctx.body={data:'error'}
+        }
+    }
+    
     
     //获得文章列表
     async getArticleList(){
@@ -85,6 +101,7 @@ class MainController extends Controller{
                   "FROM_UNIXTIME(article.addTime,'%Y-%m-%d' ) as addTime,"+
                   'article.view_count as view_count ,'+
                   'article.part_count as part_count ,'+
+                  'article.isTop as isTop ,'+
                   'type.typeName as typeName '+
                   'FROM article LEFT JOIN type ON article.type_id = type.Id '+
                   'ORDER BY article.id DESC '

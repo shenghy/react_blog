@@ -1,7 +1,7 @@
 import React,{useState } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
-import {Row, Col , List ,Icon ,BackTop ,Spin ,Affix ,Card,PageHeader} from 'antd'
+import {Row, Col ,Tag, List ,Icon ,BackTop ,Spin ,Affix ,Card} from 'antd'
 import axios from 'axios'
 import Header from '../components/Header'
 import Author from '../components/Author'
@@ -18,6 +18,7 @@ import CountUp from 'react-countup'
 
 const Home = (res) =>{
   const [ mylist , setMylist ] = useState( res.list);
+  const [ topList , setTopList ] = useState( res.topList);
   const [ type , setType ] = useState( res.type);
   const [ bibidaoList , setBibidaoList ] = useState( res.bibidaoList);
   const [ loading,setLoading] =useState(false)
@@ -63,7 +64,50 @@ const Home = (res) =>{
       
         <Row className="comm-main" type="flex" justify="center">
           <Col  xs={24} sm={24} md={18}  >
+
+
+          <div className="comm-left">
+                
               
+                <List
+                 
+                  itemLayout="vertical"
+                  dataSource={topList}
+                  renderItem={item => (
+                    <List.Item>
+                      <Spin spinning={loading}>
+                      <div className="list-title" onClick={goLoading} >
+                        <Link  href={{pathname:'/detailed',query:{id:item.id}}} >
+                          <a>{item.title}</a>
+                        </Link>
+                      </div>
+                      <div className="list-icon">
+                        <span><Tag color="#f50">置顶</Tag></span>
+                        <span><Icon type="calendar" /> {item.addTime}</span>
+                        <span><Icon type="folder" /> {item.typeName}</span>
+                        <span><Icon type="fire" /><CountUp end={item.view_count} />人</span>
+                        
+                      </div>
+                      <div className="list-context"
+                          dangerouslySetInnerHTML={{__html:item.introduce_html}}
+                      >
+                      </div>  
+                      <div className="list-go">
+                          <Icon type="file" /> &nbsp;
+                          <span  onClick={goLoading} onClick={goLoading}>
+                            <Link href={{pathname:'/detailed',query:{id:item.id}}} >
+                              <a>查看全文 </a>
+                            </Link>
+                          </span>
+                      </div>
+                      </Spin>
+                    </List.Item>
+                  )}
+                />  
+                  
+              </div>
+
+
                 <Row>
                   <Col  xs={0} sm={0} md={24}>
                   <div className="comm-left">
