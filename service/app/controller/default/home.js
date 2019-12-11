@@ -21,7 +21,7 @@ class HomeController extends Controller{
                  'article.introduce_html as introduce_html ,'+
                  'type.typeName as typeName '+
                  'FROM article LEFT JOIN type ON article.type_id = type.Id '+
-                 'WHERE article.isTop = 0 '+
+                 'WHERE article.isTop = 0  AND article.type_id <> 99 '+
                  'ORDER BY article.id DESC'
         //console.log(sql)
         const resList = await this.app.mysql.query(sql)

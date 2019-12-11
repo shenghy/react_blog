@@ -21,11 +21,11 @@
     display: inline-block;
     padding-left: 0.3rem;
 }
-.ant-meu{
-    line-height: 2.8rem;
+
+.memu-div{
+    padding-top: 10px;
 }
-.ant-menu-item{
-    font-size:1rem !important;
-    padding-left:1rem;
-    padding-right:1rem;
+.memu-div a{
+    color:#999 !important; 
+    font-size: .9rem;
 }

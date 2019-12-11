@@ -7,32 +7,7 @@ import axios from 'axios'
 import  servicePath  from '../config/apiUrl'
 
 const Header = () => {
-    const [navArray , setNavArray] = useState([])
-    useEffect(()=>{
-        const fetchData = async ()=>{
-           const result= await axios(servicePath.getTypeInfo).then(
-                (res)=>{
-                    
-                    return res.data.data
-                }
-              )
-           setNavArray(result)
-        }
-        fetchData()
-    },[])
-    //跳转到列表页
-    const handleClick = (e)=>{
-        if(e.key==0){
-            Router.replace('/index')
-        }else{
-           // Router.replace('/list?id='+e.key)
-
-            Router.push({
-                pathname: '/list',
-                query: { id: e.key }
-              })
-        }
-    }
+   
     return (
        
             <div className="header">
@@ -40,7 +15,7 @@ const Header = () => {
                     <Row type="flex" justify="center">
                         <Col  xs={24} sm={24} md={13} >
                             <span className="header-logo">
-                                <Link href={{pathname:'/index'}}>
+                                <Link href={{pathname:'/'}}>
                                     <a> 技术胖</a>
                                 </Link>
                             
@@ -49,25 +24,23 @@ const Header = () => {
                         </Col>
                     
                         <Col className="memu-div" xs={0} sm={0} md={11} >
-                            <Menu  
-                            mode="horizontal"
-                            onClick={handleClick}
-                            >
-                                <Menu.Item key="0">
-                                    <Icon type="home" />
-                                    博客首页
-                                </Menu.Item>
-                                {
-                                navArray.map((item)=>{
-                                    return(
-                                        <Menu.Item key={item.Id}>
-                                            <Icon type={item.icon} />
-                                            {item.typeName}
-                                        </Menu.Item>
-                                    )
-                                }) 
-                                }
-                            </Menu>
+                           <Row type='flex'>
+                               <Col xs={0} sm={0} md={6}  >
+                                    <Link  href={{pathname:'/'}}>
+                                        <a><Icon type='home' /> 博客首页</a>   
+                                    </Link>
+                               </Col>
+                               <Col xs={0} sm={0} md={6}  >
+                                    <Link  href={{pathname:'/list',query:{id:1}}}>
+                                        <a><Icon type='youtube' /> 视频教程</a>   
+                                    </Link>
+                               </Col>
+                               <Col xs={0} sm={0} md={6}  >
+                                    <Link  href={{pathname:'/bibidao'}}>
+                                        <a><Icon type='message' /> 逼逼叨</a>   
+                                    </Link>
+                               </Col>
+                           </Row>
                         </Col>
                     </Row>
                 </div>
