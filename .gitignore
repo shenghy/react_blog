@@ -8,7 +8,5 @@
 /blog/.next
 /blog/package-lock.json
 /blog/yarn.lock
-/admin/node_modules
-/admin/build
-/admin/package-lock.json
-/admin/yarn.lock
+/admin_app/node_modules
+/admin_app/yarn.lock
