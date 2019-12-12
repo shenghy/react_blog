@@ -111,10 +111,14 @@ function AddArticle(props){
 
    const changeContent = (e)=>{
        setArticleContent(e.target.value)
-       let html=marked(e.target.value)
-
-       setMarkdownContent(html)
+      
        
+   }
+   const markedContent = ()=>{
+        
+        let html=marked(articleContent)
+
+        setMarkdownContent(html)
    }
 
    const changeIntroduce = (e)=>{
@@ -131,7 +135,7 @@ function AddArticle(props){
     //保存文章的方法
     const saveArticle = ()=>{
         
-
+        markedContent()  //先进行转换
         
 
         if(!selectedType){
@@ -267,8 +271,7 @@ function AddArticle(props){
                                      value={articleContent} 
                                     className="markdown-content" 
                                     rows={35}  
-                                    onChange={changeContent} 
-                                    onPressEnter={changeContent}
+                                    onChange={changeContent}
                                     placeholder="文章内容"
                                     />
 

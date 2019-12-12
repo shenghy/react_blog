@@ -205,7 +205,24 @@ const Home = (res) =>{
 
 } 
 
-Home.getInitialProps = async ()=>{
+Home.getInitialProps = async (context)=>{
+
+  let date=new Date();
+
+ 
+  let month=date.getMonth();
+  let day=date.getDate();
+
+  let  hour=date.getHours();
+  let minute=date.getMinutes();
+  let second=date.getSeconds();
+  let time=month+'/'+day+'/'+hour+':'+minute+':'+second
+  
+  
+  
+  console.log('----->'+time+':Visit the Index page')
+
+
   const promise = new Promise((resolve)=>{
     axios(servicePath.getArticleList).then(
       (res)=>{

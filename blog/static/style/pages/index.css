@@ -18,14 +18,15 @@ pre >code{
 }
 code {
     display: inline-block ;
-    background-color:#f3f3f3;
-    border:1px solid #fdb9cc;
+    background-color:#fff5f5;
     border-radius:3px;
-    font-size: 12px;
+   
     padding-left: 5px;
     padding-right: 5px;
-    color:#4f4f4f;
+    color:#ff502c;
     margin: 0px 3px;
+    line-height: 1.1rem;
+    font-size: .87rem;
 
 }
 .list-context{

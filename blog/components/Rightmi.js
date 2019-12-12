@@ -23,8 +23,18 @@ const Rightmi =()=>{
                         
                     </div>
                 </TabPane>
+
+                <TabPane tab="公号" key="2">
+                    <div className="miquan-price">
+                        <div className="miquan-img">
+                            <img src="http://newimg.jspang.com/weixingongzhonghao.jpg" />
+                        </div>
+                    
+                        
+                    </div>
+                </TabPane>
                 
-                <TabPane tab="QQ群" key="2">
+                <TabPane tab="QQ群" key="3">
                     <div className="miquan-price">
                       加入QQ群  一起学习
                     </div>
@@ -57,11 +67,7 @@ const Rightmi =()=>{
                             
                     </div>
                 </TabPane>
-                <TabPane tab="公号" key="3">
-                    <div className="miquan-price">
-                     近期上线
-                    </div>
-                </TabPane>
+              
                
             </Tabs>
         </div>

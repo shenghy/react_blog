@@ -162,8 +162,19 @@ const Detailed = (props) =>{
 } 
 
 Detailed.getInitialProps = async(context)=>{
+  let date=new Date();
+
+ 
+  let month=date.getMonth();
+  let day=date.getDate();
+
+  let  hour=date.getHours();
+  let minute=date.getMinutes();
+  let second=date.getSeconds();
+  let time=month+'/'+day+'/'+hour+':'+minute+':'+second
   
-  console.log(context.query.id)
+  
+  console.log('----->'+time+':Visit the details page,parameter='+context.query.id)
   //把ID强制转换成数字
 
   let id =parseInt(context.query.id)
