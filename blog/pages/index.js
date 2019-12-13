@@ -55,7 +55,8 @@ const Home = (res) =>{
       
       <Head>
         <title>首页 | 技术胖-胜洪宇关注web前端技术-前端免费视频第一博客</title>
-
+        <meta name="description" content="首页 | 技术胖-胜洪宇关注web前端技术-前端免费视频第一博客"></meta>
+        <link rel="icon" href="../static/favicon.ico" mce_href="../static/favicon.ico" type="image/x-icon" / >
       </Head>
       <Affix offsetTop={0}>
         <Header/>

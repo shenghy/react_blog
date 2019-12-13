@@ -90,6 +90,7 @@ const Detailed = (props) =>{
       <Head>
         <title>技术胖-{props.title}</title>
         <meta name="description" content={props.title}></meta>
+        <link rel="icon" href="../static/favicon.ico" mce_href="../static/favicon.ico" type="image/x-icon" / >
       </Head>
       <Header />
       <Row className="comm-main" type="flex" justify="center">

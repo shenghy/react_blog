@@ -23,7 +23,8 @@ const Bibidao = (data) =>{
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>大胖逼逼叨</title>
+        <link rel="icon" href="../static/favicon.ico" mce_href="../static/favicon.ico" type="image/x-icon" / >
       </Head>
       <Header />
       <Row className="comm-main" type="flex" justify="center">

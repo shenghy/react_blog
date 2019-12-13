@@ -51,7 +51,8 @@ const ArticleList = (list) =>{
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>列表| 技术胖-胜洪宇关注web前端技术-前端免费视频第一博客</title>
+        <link rel="icon" href="../static/favicon.ico" mce_href="../static/favicon.ico" type="image/x-icon" / >
       </Head>
       <Header />
       <Row className="comm-main" type="flex" justify="center">
