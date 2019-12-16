@@ -1,8 +1,12 @@
-import {Icon, Tabs,Alert} from 'antd'
+import {Icon, Tabs,Alert,Button} from 'antd'
 import '../static/style/components/rightmi.css'
 const { TabPane } = Tabs;
 
-const Rightmi =()=>{
+const Rightmi =(props)=>{
+
+   const goArticle=()=>{
+        window.location.href="https://jspang.com/detailed?id=54"   
+   }
 
     return (
         <div className="comm-box rightmi-div">
@@ -21,6 +25,9 @@ const Rightmi =()=>{
                         <p><Icon type="check-circle" theme="twoTone" twoToneColor="#1890ff" /> 技术胖收费视频半价购买</p>
                         <p><Icon type="check-circle" theme="twoTone" twoToneColor="#1890ff" /> 每天回答所提问题（选择性回答）</p>
                         
+                    </div>
+                    <div className="quan-button">
+                         <Button type="primary" onClick={goArticle}>查看详情</Button>
                     </div>
                 </TabPane>
 

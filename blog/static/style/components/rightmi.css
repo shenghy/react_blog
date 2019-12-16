@@ -1,5 +1,6 @@
 .rightmi-div{
     margin-top: 8px !important;
+    margin-bottom: 8px !important;
 }
 .miquan-img img{
     width: 100%;
@@ -19,4 +20,8 @@
 }
 .miquan-text span{
     color:#999;
+}
+.quan-button{
+  text-align: center;
+  margin-bottom: 10px;
 }

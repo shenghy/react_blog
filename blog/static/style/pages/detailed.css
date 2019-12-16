@@ -53,7 +53,7 @@ pre{
      border-radius: .3rem;
 }
 
-pre >code{
+pre > code{
     border:0px !important;
     background-color: #283646 !important;
     color:#ccc !important;
@@ -64,7 +64,6 @@ code {
     display: inline-block ;
     background-color:#fff5f5;
     border-radius:3px;
-   
     padding-left: 5px;
     padding-right: 5px;
     color:#ff502c;
