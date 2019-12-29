@@ -8,6 +8,7 @@ import Author from '../components/Author'
 import Advert from '../components/Advert'
 import Footer from '../components/Footer'
 import Rightmi from '../components/Rightmi'
+import StudyLine from '../components/StudyLine'
 import '../static/style/pages/index.css'
 import marked from 'marked'
 import hljs from "highlight.js";
@@ -193,7 +194,9 @@ const Home = (res) =>{
             <Author />
             <Affix offsetTop={60}>
               <Rightmi/>
+              <StudyLine/>
               <Advert />
+            
             </Affix>
             
           </Col>

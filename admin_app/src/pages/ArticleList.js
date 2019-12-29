@@ -26,8 +26,7 @@ function ArticleList(props){
                 header:{ 'Access-Control-Allow-Origin':'*' }
             }).then(
             res=>{
-                setList(res.data.list)  
-                
+                setList(res.data.list)     
              }
          )
     } 

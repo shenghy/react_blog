@@ -41,26 +41,29 @@ const Bibidao = (data) =>{
                <List
                     dataSource={mylist}
                     grid={{
-                        gutter: 15,
+                        gutter: 20,
                         xs: 1,
                         sm: 4,
                         md: 4,
-                        lg:4
+                        lg:4,
                        
                     }}
                     renderItem={item => (
                         <List.Item>
-                            <Card  bordered={false}  >
-                            <div>
+                            <Card  
+                              hoverable 
+                              bordered={true}  
+                            >
+                              <div className="item-div">
+                                  <a href={item.url} target="_blank" className="img-wrapper">
+                                    <img alt="example"  className="bbd-img" src={item.image}  />
+                                  </a>
+                              </div>
+                              <div className="bbd-title">
                                 <a href={item.url} target="_blank">
-                                  <img alt="example" src={item.image} className="bbd-img"/>
+                                  <span className="bbd-zi">{item.title} </span> 
                                 </a>
-                            </div>
-                            <div className="bbd-title">
-                              <a href={item.url} target="_blank">
-                                 <span className="bbd-zi">{item.title} </span> 
-                              </a>
-                            </div>
+                              </div>
                            
                              
                             </Card>

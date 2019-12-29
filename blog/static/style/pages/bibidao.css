@@ -1,6 +1,6 @@
 .bbd-img{
-    border-radius: 4px;
-   
+    border-radius: 5px;
+    display:inline-block; 
 }
 .bbd-title{
     margin-top:10px;
@@ -8,3 +8,12 @@
 .bbd-zi{
     color: #888;
 }
+.item-div{
+    width: 100%;
+    overflow: hidden;
+}
+.img-wrapper{
+    display: block;
+    
+}
+
