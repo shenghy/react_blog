@@ -24,3 +24,7 @@
 .author-tag{
     line-height: 27px;
 }
+
+.ant-avatar-image{
+    background: #ccc !important;
+}

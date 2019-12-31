@@ -42,8 +42,15 @@ const Author =()=>{
                 </div>
 
                 <Divider>社交账号</Divider>
+                <Tooltip title="B站 : https://space.bilibili.com/165659472">
+                    <a href="https://space.bilibili.com/165659472" target="_blank">
+                    <Avatar size={28} src="http://newimg.jspang.com/bilibiliIcon1.png" className="account"  />
+                    </a>
+                </Tooltip>
                 <Tooltip title="https://github.com/shenghy">
+                    <a href="https://github.com/shenghy" target="_blank">
                     <Avatar size={28} icon="github" className="account"  />
+                    </a>
                 </Tooltip>
                 <Tooltip title="QQ:8745662">
                     <Avatar size={28} icon="qq"  className="account" />
